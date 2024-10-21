@@ -1,4 +1,4 @@
-# MathVista
+# DynaMath
 
 This website is adapted from [Nerfies website](https://nerfies.github.io).
 
@@ -9,7 +9,7 @@ This website is adapted from [Nerfies website](https://nerfies.github.io).
 ## Update the leaderboard
 
 ```sh
-cd mathvista.github.io
+cd dynamath.github.io
 cd data/results
 
 python3 process_outputs.py
