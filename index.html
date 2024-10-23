@@ -46,8 +46,11 @@
   <script src="./static/js/question_card.js"></script>
 
   <script src="./static/js/leaderboard_testmini.js"></script>  
+  <!-- <script src="./static/js/worst.js"></script>  -->
   <script src="./data/results/output_folders.js" defer></script>
   <script src="./data/results/model_scores.js" defer></script>
+  <script src="./static/js/worst.js"></script>
+  <script src="./data/results/model_scores_worst.js" defer></script>
 
   <script src="./visualizer/data/data_public.js" defer></script>
 </head>
@@ -125,20 +128,20 @@
           </h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/chengke-zou-023b49294/">Chengke Zou</a><sup style="color:#6fbf73;">1</sup>,</span>
+              <a href="https://www.linkedin.com/in/chengke-zou-023b49294/">Chengke Zou</a><sup style="color:#ffac33;">1,</sup><sup style="color:#6fbf73;">2</sup>,</span>
             <span class="author-block">
-              <a href="https://sites.google.com/view/guoxingang">Xingang Guo</a><sup style="color:#ffac33;">2</sup>,</span>
+              <a href="https://sites.google.com/view/guoxingang">Xingang Guo</a><sup style="color:#ffac33;">1</sup>,</span>
             <span class="author-block">
-              <a href="https://yangrui2015.github.io/">Rui Yang</a><sup style="color:#ffac33;">2</sup>,
+              <a href="https://yangrui2015.github.io/">Rui Yang</a><sup style="color:#ffac33;">1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://jyzhang1208.github.io/">Junyu Zhang</a><sup style="color:#ffac33">2</sup>,
+              <a href="https://jyzhang1208.github.io/">Junyu Zhang</a><sup style="color:#ffac33">1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://binhu7.github.io/">Bin Hu</a><sup style="color:#ffac33">2</sup>,
+              <a href="https://binhu7.github.io/">Bin Hu</a><sup style="color:#ffac33">1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://huan-zhang.com/">Huan Zhang</a><sup style="color:#ffac33">2</sup>
+              <a href="https://huan-zhang.com/">Huan Zhang</a><sup style="color:#ffac33">1</sup>
             </span>
             <!-- <span class="author-block">
               <a href="https://sites.google.com/site/hcheng2site/Home">Hao Cheng</a><sup style="color:#ffac33">3</sup>,
@@ -155,9 +158,9 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup style="color:#6fbf73;">1</sup>University of California, Berkeley,</span><br>
+            <span class="author-block"><sup style="color:#ffac33">1</sup>University of Illinois at Urbana-Champaign,</span><br>
             <!-- <span class="author-block"><sup style="color:#ed4b82">2</sup>University of Washington,</span> -->
-            <span class="author-block"><sup style="color:#ffac33">2</sup>University of Illinois at Urbana-Champaign</span><br>
+            <span class="author-block"><sup style="color:#6fbf73;">2</sup>University of California, Berkeley</span><br>
             <!-- <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span> -->
           </div>
         
@@ -1238,20 +1241,25 @@
               <li><b>Real-life Contexts Variants:</b> Adjusting the contents of real-world scenarios (e.g., calendars, time-related problems, or poker-like questions) to test the model’s contextual understanding and application to practical situations.</li>
             </ol>
 
-            <div id="results-carousel" class="carousel results-carousel">
-            <div class="box m-5" style="width: 94%; height: auto;">
-              <div class="content has-text-centered" style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+            <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+            <!-- <div class="box m-5" style="width: 94%; height: auto;"> -->
+              <div class="content has-text-centered" style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
                 <img src="static/images/variation-type.png" alt="variation type" width="100%" style="margin-top: 10px; margin-bottom: 10px;"/>
                 <p style="margin-top: 5px;"> Variantion types considered in our 
                   <span class="dynamath">DynaMath</span> benchmark.
                 </p>
               </div>
-            </div>
+            <!-- </div> -->
             <!-- style="margin-right: -5rem;" -->
-            <div class="box m-5" style="width: 94%; height: auto;" >
-              <div class="columns is-centered" style="width: 100%;">
-                <div class="column"  style="width: 105%; margin-right: -5rem; margin-top: 1rem;">
-                  <div class="content has-text-centered">
+            <!-- <div class="box m-5" style="width: 94%; height: auto;" > -->
+            <div class="columns is-centered">
+              <div class="column is-full has-text-centered content">
+                <h2 class="title is-3" style="margin-top: 35px; margin-bottom: -5px;">Statistics</h2>
+              <div class="columns is-centered" style="width: 105%;">
+                <!-- <div class="column is-full has-text-centered content"></div> -->
+                <!-- <h2 class="title is-3">Statistics</h2> -->
+                <div class="column is-centered"  style="width: 105%; margin-right: -5rem; margin-top: 1rem;">
+                  <div class="content has-text-centered" style="margin-top: 10px; margin-bottom: 10px;">
                     <img src="static/images/statistics.png" alt="data-overview" style="max-width: 100%;"/>
                     <p> 
                       Key statistics of 
@@ -1259,18 +1267,18 @@
                     </p> 
                   </div>
                 </div>
-                <div class="column" style="width: 44%; display: flex; flex-direction: column; justify-content: space-between; gap: 0rem;">
-                  <div class="column" style="margin-right: -5rem; margin-top: 0rem; margin-bottom: -2rem;" >
-                    <div class="content has-text-centered">
-                      <img src="static/images/variant-distribution.png" alt="data-overview" style="max-width: 70%;"/>
+                <div class="column is-centered" style="width: 45%; display: flex; flex-direction: column; justify-content: space-between; gap: 0rem;">
+                  <div class="column is-centered" style="margin-right: -5rem; margin-top: 0rem; margin-bottom: -2rem;" >
+                    <div class="content has-text-centered" style="margin-top: 10px; margin-bottom: 10px;">
+                      <img src="static/images/variant-distribution.png" alt="data-overview" style="max-width: 74%;"/>
                       <p> 
                         Variant number distribution.
                       </p> 
                     </div>
                   </div>
-                  <div class="column" style="margin-right: -5rem; margin-bottom: 0rem;">
+                  <div class="column is-centered" style="margin-right: -5rem; margin-bottom: 0rem;">
                     <div class="content has-text-centered">
-                      <img src="static/images/pie_chart.png" alt="data-overview" style="max-width: 45%;"/>
+                      <img src="static/images/pie_chart.png" alt="data-overview" style="max-width: 49%;"/>
                       <p> 
                         Source composition of 
                         <span class="dynamath">DynaMath</span>.<br/>
@@ -1280,7 +1288,7 @@
                 </div> 
               </div>
             </div>
-            </div>
+          </div>
             <!-- <div class="content has-text-centered" style="text-align: center; margin-top: 20px; margin-bottom: 30px;">
               <img src="static/images/variation-type.png" alt="variation type" width="100%" style="margin-top: 20px; margin-bottom: 10px;"/>
               <p style="margin-top: 5px;"> Variantion types considered in our 
@@ -1331,160 +1339,83 @@
     
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Examples</h2>
-        <p>One example for each <b>mathematical reasoning</b> skill required in <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="mathvista">MathVista</span></p>
+        <h2 class="title is-3" style="margin-top: 20px; margin-bottom: -20px;">Examples For Different Topics</h2>
+        <!-- <p>One example for each <b>mathematical reasoning</b> skill required in <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="mathvista">MathVista</span></p> -->
+          <div class="container m-6" style="text-align: left;">
 
+            <p>We show sample problems in <span class="dynamath">DynaMath</span> for different topics, including Solid Geometry (SG), Puzzle Tests (PT), Arithmetic (AR), Scientific Figures (SF), Graph Theory (GT),
+          Algebra (AL), Plane Geometry (PG), Analytic Geometry (AG), and Statistics (ST).</p>
+
+          <!-- </div> -->
+        </div>
+          
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/ari.png" alt="arithmetic reasoning" width="60%"/>
-              <p>Arithmetic Reasoning</p>
+              <img src="static/images/solid-geometry.png" alt="arithmetic reasoning" width="90%"/>
+              <p>Solid Geometry</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/alg.png" alt="algebraic reasoning" width="60%"/>
-              <p>Algebraic Reasoning</p>
+              <img src="static/images/puzzle-test.png" alt="algebraic reasoning" width="90%"/>
+              <p>Puzzle Tests</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/geo.png" alt="geometric reasoning" width="60%"/>
-              <p>Geometric Reasoning</p>
+              <img src="static/images/arithmetic.png" alt="arithmetic reasoning" width="90%"/>
+              <p>Arithmetic</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/log.png" alt="logical reasoning" width="60%"/>
-              <p>Logical Reasoning</p>
+              <img src="static/images/scientific-figure.png" alt="algebraic reasoning" width="90%"/>
+              <p>Scientific Figures</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/num.png" alt="numeric reasoning" width="60%"/>
-              <p>Numeric Reasoning</p>
+              <img src="static/images/graph-theory.png" alt="arithmetic reasoning" width="90%"/>
+              <p>Graph Theory</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/sta.png" alt="statistical reasoning" width="60%"/>
-              <p>Statistical Reasoning</p>
+              <img src="static/images/algebra.png" alt="algebraic reasoning" width="90%"/>
+              <p>Algebra</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/sci.png" alt="scientific reasoning" width="60%"/>
-              <p>Scientific Reasoning</p>
+              <img src="static/images/plane-geometry.png" alt="arithmetic reasoning" width="90%"/>
+              <p>Plane Geometry</p>
             </div>
           </div>
-
-          
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/analytic-geometry.png" alt="algebraic reasoning" width="90%"/>
+              <p>Analytic Geometry</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/statistic.png" alt="algebraic reasoning" width="90%"/>
+              <p>Statistics</p>
+            </div>
+          </div>
         </div>
 
-        <br><br>
+        <!-- <br><br>
         <p>One example for each <b>visual context</b> type required in <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-          <span class="mathvista">MathVista</span></p>
+          <span class="mathvista">MathVista</span></p> -->
 
-        <div id="results-carousel" class="carousel results-carousel">
-
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/1_Geometry_Diagram.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Geometry Diagram</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/2_Synthetic_Scene.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Synthetic Scene</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/3_Bar_Chart.png" alt="arithmetic reasoning" width="65%"/>
-              <p>Bar Chart</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/4_Natural_Image.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Natural Image</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/5_Scientific_Figure.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Scientific Figure</p>
-            </div>
-          </div>
-
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/6_Table.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Table</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/7_Function_Plot.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Function Plot</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/8_Abstract_Scene.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Abstract Scene</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/9_Puzzle_Test.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Puzzle Test</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/10_Scatter_Plot.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Scatter Plot</p>
-            </div>
-          </div>
-          
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/11_Line_Plot.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Line Plot</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/12_Pie_Chart.png" alt="arithmetic reasoning" width="75%"/>
-              <p>Pie Chart</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/13_Document_Image.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Document Image</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/14_Medical_Image.png" alt="arithmetic reasoning" width="80%"/>
-              <p>Medical Image</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/contexts/15_Others.png" alt="arithmetic reasoning" width="45%"/>
-              <p>Others</p>
-            </div>
-          </div>
-
-        </div>
+        
       </div>
     </div>
-    <div class="columns is-centered m-6">
+
+    <!-- <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Statistics</h2>
         <p>Notable statistics of <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
@@ -1504,52 +1435,15 @@
                 <span class="mathvista">MathVista</span></p>
             </div>
           </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/statistics/grade-levels.png" alt="grade" class="stats-image"/>
-              <p>Distribution of questions across different grade levels within <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-                <span class="mathvista">MathVista</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/statistics/qs-len.png" alt="qs-len" class="stats-image"/>
-              <p>Distribution of the number of words per question in <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-                <span class="mathvista">MathVista</span>. 
-                <!-- Questions with a length greater than 60 are categorized as 61 for visualization simplicity -->
-              </p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/statistics/reasoning.png" alt="reasoning" class="stats-image"/>
-              <p>Portion of each mathematical reasoning type involved in the problems of <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-                <span class="mathvista">MathVista</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/statistics/reasoning-count.png" alt="reasoning-count" class="stats-image"/>
-              <p>Distribution of the number of mathematical reasoning types within <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-                <span class="mathvista">MathVista</span></p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/statistics/task-type.png" alt="task-type" class="stats-image"/>
-              <p>Task type distribution of problems within <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-                <span class="mathvista">MathVista</span></p>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
-    <div class="columns is-centered m-6">
+    </div> -->
+    <!-- <div class="columns is-centered m-6">
       <div class="column is-max-desktop has-text-centered">
         <h2 class="title is-3" id="visualization">Visualization</h2>
         <iframe src="visualizer/explore.html" style="width: 100%;min-height: 100vh; border-radius: 20px;"></iframe>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -1562,21 +1456,121 @@
 
 <section class="section">
   <div class="container">
+    <div class="columns m-6" style="margin: 0 auto;">
+      <!-- <div class="column is-four-fifths"> -->
+        <!-- <div class="content has-text-justified"> -->
+      <!-- <div class="column is-full has-text-centered content"> -->
+        <p>To evaluate the mathematical reasoning robustness of existing VLMs on <span class="dynamath">DynaMath</span>, we generate 10 variants, resulting in a total of 5,010 questions to assess their performance.</p>
+      </div>
+    </div>
+  <!-- </div> -->
+  <!-- <div class="content">
+    <p class="mt-3">Accuracy scores on the <b>testmini</b> subset (1,000 examples) of <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+      <span class="mathvista">MathVista</span>.
+    </p> -->
+
+    <!-- <div id="testmini_leaderboard"></div> -->
+
+    <div class="column is-full has-text-centered content"> 
+      <h2 class="title is-3" style="margin-top: -10px; margin-bottom: -10px;">Average-case Accuracy</h2>
+    </div>  
+    <div class="container">
+      <div class="columns m-6" style=" margin: 0 auto;">
+        <p>The table below shows the Average-case accuracy of 14 models (three Closed-sourced Large Multimodal Models (LMMs) and 11 Vision Language Models (VLMs)) on 
+          <span class="dynamath">DynaMath</span> with 5,010 generated questions.
+        </p>
+      </div>
+        <div id="average-acc"></div>
+        </table>
+    </div>
+
+
+    <div class="column is-full has-text-centered content"> 
+      <h2 class="title is-3" style="margin-top: 20px; margin-bottom: -20px;">Worst-case Accuracy</h2>
+    </div>  
+    <div class="container">
+      <div class="columns m-6" style=" margin: 0 auto;">
+        <p>The table below shows the Worst-case accuracy of 14 models (three Closed-sourced Large Multimodal Models (LMMs) and 11 Vision Language Models (VLMs)) on 
+          <span class="dynamath">DynaMath</span> with 5,010 generated questions.
+        </p>
+      </div>
+        <div id="worst-acc"></div>
+        </table>
+    </div>
 
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Results on Existing Foundation Models</h2>
-        <!-- <p>One example for each reasoning skill required in <span class="mathvista">MathVista</span></p> -->
+        <h2 class="title is-3">Results Analysis </h2>
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/results-figures/score_leaderboard_gpt4v.png" alt="grade-lv" width="60%"/>
-              <p>Accuracy scores of primary baselines on the testmini subset (1,000 examples) of <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-                <span class="mathvista">MathVista</span>. 
-                <br>
-                Both CoT GPT-4 and PoT GPT-4 are augmented with Bard captions and OCR text.</p>
+              <img src="static/images/RR_open.png" alt="" width="90%"/>
+              <p>Comparing <b>Reasoning Robustness</b> across different models.
+              </p>
             </div>
           </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/RR_compare.png" alt="" width="130%"/>
+              <p>Comparing <b>Reasoning Robustness</b> across different topics.
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered" style="margin-top: 60px; margin-bottom: 60px;">
+              <img src="static/images/RC.png" alt="" width="90%"/>
+              <p>The <b>Repetition Consistency</b> for different models over 5 repetitions.
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/error_analysis_pie_chart.png" alt="" width="28%"/>
+              <p>Error Analysis of Claude-3.5 Sonnet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered">
+        <h2 class="title is-3">Memorization Phenomenon </h2>
+        <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+          <!-- <br><br> -->
+          <div class="container m-6" style="text-align: left;">
+            <!-- <div class="column is-full" > -->
+            <p>Example of the Memorization Phenomenon: the generated variants of seed Question 12
+              and the corresponding responses from Claude 3.5 Sonnet.
+            </p>
+          <!-- </div> -->
+        </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/memory-error.png" alt="" width="90%"/>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+      <!-- <div id="results-carousel" class="carousel results-carousel">
+        <div class="box m-5">
+          <div class="content has-text-centered">
+            <img src="static/images/results-figures/score_leaderboard_gpt4v.png" alt="grade-lv" width="60%"/>
+            <p>Accuracy scores of primary baselines on the testmini subset (1,000 examples) of 
+              <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">MathVista</span>.
+              <br> Both CoT GPT-4 and PoT GPT-4 are augmented with Bard captions and OCR text.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/results-figures/bard_error.png" alt="grade-lv" width="70%"/>
@@ -1607,128 +1601,65 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Visualization Examples</h2>
+        <h2 class="title is-3">Error Examples</h2>
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/results-examples/5.png" alt="" width="60%"/>
+              <img src="static/images/figure-read-error.png" alt="" width="70%"/>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/results-examples/6.png" alt="" width="60%"/>
+              <img src="static/images/calculation-error.png" alt="" width="70%"/>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/results-examples/37.png" alt="" width="60%"/>
+              <img src="static/images/hallucination-error.png" alt="" width="70%"/>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/results-examples/38.png" alt="" width="60%"/>
+              <img src="static/images/reasoning-error.png" alt="" width="70%"/>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/results-examples/39.png" alt="" width="60%"/>
+              <img src="static/images/knowledge-error.png" alt="" width="70%"/>
             </div>
           </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/40.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/41.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/42.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/43.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/44.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/45.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/46.png" alt="" width="50%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/47.png" alt="" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/48.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/49.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/50.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/51.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/52.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/53.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/54.png" alt="" width="40%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/55.png" alt="" width="55%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-examples/56.png" alt="" width="50%"/>
-            </div>
-          </div>   
-
         </div>
       </div>
     </div>
 
-    <div class="container is-full has-text-centered content m-6" id="result-table">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Question Variant Examples</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/gpt4o-variant.png" alt="" width="80%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/gemini-variant.png" alt="" width="80%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Qwen-variant.png" alt="" width="80%"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container is-full has-text-centered content m-6" id="result-table">
       <h2 class="title is-3" id="explorer">Explorer</h2>
       <p>Explore the outputs of each model on <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
         <span class="mathvista">MathVista</span></p>
@@ -1752,14 +1683,14 @@
               </button>
             </div>
             <div class="dropdown-menu" id="dropdown-menu" role="menu" style="width:100%;">
-              <div class="dropdown-content">
+              <div class="dropdown-content"> -->
                 <!-- <a class="dropdown-item">
                   Dropdown item
                 </a>
                 <a class="dropdown-item">
                   Other dropdown item
                 </a> -->
-              </div>
+              <!-- </div>
             </div>
           </div>
         </div>
@@ -1774,19 +1705,19 @@
               </button>
             </div>
             <div class="dropdown-menu" id="dropdown-menu" role="menu" style="width:100%;">
-              <div class="dropdown-content">
+              <div class="dropdown-content"> -->
                 <!-- <a class="dropdown-item">
                   Dropdown item
                 </a>
                 <a class="dropdown-item">
                   Other dropdown item
                 </a> -->
-              </div>
+              <!-- </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
   </div>
 </section>
 

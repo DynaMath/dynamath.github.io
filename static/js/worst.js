@@ -1,24 +1,24 @@
-function generateTable() {
-  var data = score_table; // The variable from model_scores.js
+function generateTable2() {
+  var data2 = score_table_worst; // The variable from model_scores.js
   
   var table = '<table class="js-sort-table" id="results">';
   
   // Table header
   table += `<tr>
           <td class="js-sort"><strong>Model</strong></td>
-          <td class="js-sort-number" onclick="sortTable(1)"><strong><u>ALL</u></strong></td>
-          <td class="js-sort-number" onclick="sortTable(2)"><strong>PG</strong></td>
-          <td class="js-sort-number" onclick="sortTable(3)"><strong>SG</strong></td>
-          <td class="js-sort-number" onclick="sortTable(4)"><strong>AG</strong></td>
-          <td class="js-sort-number" onclick="sortTable(5)"><strong>AL</strong></td>
-          <td class="js-sort-number" onclick="sortTable(6)"><strong>PT</strong></td>
-          <td class="js-sort-number" onclick="sortTable(7)"><strong>GT</strong></td>
-          <td class="js-sort-number" onclick="sortTable(8)"><strong>ST</strong></td>
-          <td class="js-sort-number" onclick="sortTable(9)"><strong>SF</strong></td>
-          <td class="js-sort-number" onclick="sortTable(10)"><strong>AR</strong></td>
-          <td class="js-sort-number" onclick="sortTable(11)"><strong>EL</strong></td>
-          <td class="js-sort-number" onclick="sortTable(12)"><strong>HI</strong></td>
-          <td class="js-sort-number" onclick="sortTable(13)"><strong>UN</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(1)"><strong><u>ALL</u></strong></td>
+          <td class="js-sort-number" onclick="sortTable2(2)"><strong>PG</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(3)"><strong>SG</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(4)"><strong>AG</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(5)"><strong>AL</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(6)"><strong>PT</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(7)"><strong>GT</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(8)"><strong>ST</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(9)"><strong>SF</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(10)"><strong>AR</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(11)"><strong>EL</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(12)"><strong>HI</strong></td>
+          <td class="js-sort-number" onclick="sortTable2(13)"><strong>UN</strong></td>
       </tr>`;
 
   // Adding Closed-sourced LLMs header
@@ -26,13 +26,13 @@ function generateTable() {
   
 
   // Get all keys in data
-  var keys = Object.keys(data);
+  var keys = Object.keys(data2);
   var openSourceFlag = false; // For inserting the Open-sourced VLMs row later
 
   // Loop through the sorted data
   for (var i = 0; i < keys.length; i++) {
     var key = keys[i];
-    var entry = data[key];
+    var entry = data2[key];
 
     // Insert "Open-sourced VLMs" header when we transition to the first open-source entry
     if (!openSourceFlag && key.startsWith("Qwen2")) {
@@ -67,13 +67,15 @@ function generateTable() {
   }
 
   table += '</table>';
-  document.getElementById('average-acc').innerHTML = table; 
+  document.getElementById('worst-acc').innerHTML = table; 
 }
 
 // Call the function when the window loads
-window.onload = generateTable;
-
-function sortTable(n) {
+window.onload = function(){
+  generateTable();
+  generateTable2();
+}
+function sortTable2(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById("results");
   switching = true;
