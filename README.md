@@ -4,9 +4,8 @@ This website is adapted from [Nerfies website](https://nerfies.github.io).
 
 ### TODO
 Add Paper, Arkiv, Huggingface Dataset.
-Add More Research Part.
 Add Bibtex.
-Add Variation examples.
+Modify experiments results.
 
 
 # Website License
