@@ -64,6 +64,11 @@ function generateTable() {
     table += `<td>${entry.HI.toFixed(1)}</td>`;
     table += `<td>${entry.UN.toFixed(1)}</td>`;
     table += '</tr>';
+
+    // table += `<td style="background-color: #FFD700;">${entry.EL.toFixed(1)}</td>`; // Gold
+    // table += `<td style="background-color: #FF4500;">${entry.HI.toFixed(1)}</td>`; // OrangeRed
+    // table += `<td style="background-color: #8A2BE2;">${entry.UN.toFixed(1)}</td>`; // BlueViolet
+    // table += '</tr>';
   }
 
   table += '</table>';

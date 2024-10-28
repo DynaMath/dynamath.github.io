@@ -48,6 +48,18 @@ table#results.js-sort-14 tbody tr td:nth-child(15) {
 }
 
 /*table tile*/
+#results td:nth-child(12) { 
+    background-color: #f8eaea; 
+}
+  
+#results td:nth-child(13) { 
+    background-color: #f8eaea; 
+}
+  
+#results td:nth-child(14) { 
+    background-color: #f8eaea; 
+}
+
 #results th {
     border: 1px solid #ddd;
     padding: 8px;
@@ -87,3 +99,7 @@ table#results.js-sort-14 tbody tr td:nth-child(15) {
     color: #C6011F
     /* color: #3457D5 */
 }
+
+
+
+  
